@@ -1,0 +1,42 @@
+create database aula_php;
+use aula_php;
+
+create table usuarios(
+id int PRIMARY  KEY auto_increment,
+email varchar(255) unique,
+senha varchar(255)
+);
+
+create table nota_fiscal(
+nf int PRIMARY KEY auto_increment,
+data date,
+valor_total decimal(7,2)
+);
+
+create table produtos(
+id int PRIMARY KEY auto_increment,
+nome varchar(50),
+preco decimal(7,2)
+);
+
+create table itens_nf(
+id int PRIMARY KEY auto_increment,
+cod_produto int,
+num_nf int,
+qtde int,
+subtotal decimal(7,2),
+
+FOREIGN KEY(cod_produto) REFERENCES produtos (id),
+FOREIGN KEY(num_nf) REFERENCES nota_fiscal(nf)
+);
+
+
+INSERT into produtos(nome, preco) VALUES
+('Camarão', 12),
+('Lula frita',23),
+('Peixe frito',8),
+('Água', 10);
+
+INSERT into usuarios(email, senha) VALUES
+('joao@gmail.com', 1234),
+('carvalho@gmail.com',4321);

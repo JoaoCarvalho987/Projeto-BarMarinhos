@@ -1,0 +1,27 @@
+.cabecalho {
+	background-color: #5F9EA0;
+}
+
+.background{
+	
+	background-image:url(../img/background.png);
+	background-size:cover; 
+	background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.centro{
+	margin-right: 20%;
+	margin-left: 20%;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	align-items: center;
+}
+
+.parara{
+	background-color: black 10%opacity
+}
